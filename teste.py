@@ -15,13 +15,6 @@ print("Hello " + name)
 print("Você tem " + str(age) + " anos de idade")
 print("E mede "+ str(altura) + " cm de altura")
 
-Write code below 💖
-
-eu quando
-
-Write code below 💖
-
-eu quando
 
 print('JJJJJJJJJJ')
 print('    J')
@@ -38,7 +31,6 @@ date = "15/07/2025"
 
 print(date + " OMG so amazing python is top uhul! 🫶") 
 
-Write code below 💖
 fahrenheit = float(input("Fahrenheit: "))
 celsius = (fahrenheit - 32)/1.8
 
