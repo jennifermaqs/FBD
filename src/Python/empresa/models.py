@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import Optional
 from datetime import date
 
 class Departamento(BaseModel):
@@ -9,9 +9,9 @@ class Departamento(BaseModel):
     data_inicio_gerente: Optional[date] = None
 
 class DepartamentoUpdate(BaseModel):
-    dnome: str
+    dnome: Optional[str] = None
     cpf_gerente: Optional[str] = None
-    data_inicio_gerente: Optional[date] = None
+    data_inicio_gerente: Optional[str] = None  
 
 class Funcionario(BaseModel):
     pnome: str
@@ -24,7 +24,7 @@ class Funcionario(BaseModel):
     salario: Optional[float] = None
     cpf_supervisor: Optional[str] = None
     dnr: Optional[int] = None
-    
+
 class FuncionarioUpdate(BaseModel):
     pnome: Optional[str] = None
     minicial: Optional[str] = None
@@ -35,7 +35,8 @@ class FuncionarioUpdate(BaseModel):
     salario: Optional[float] = None
     cpf_supervisor: Optional[str] = None
     dnr: Optional[int] = None
-    
+
+
 class LocalizacaoDep(BaseModel):
     dnumero: int
     dlocal: str
@@ -45,20 +46,15 @@ class Projeto(BaseModel):
     projnome: str
     projlocal: Optional[str] = None
     dnum: int
-    
-class ProjetoUpdate(BaseModel):
-    projnome: str
-    projlocal: Optional[str] = None
-    dnum: int
-    
+
 class TrabalhaEm(BaseModel):
-    fcpr: str
+    fcpf: str
     pnr: int
     horas: float
-    
-class Depedente(BaseModel):
-    fcpr: int
+
+class Dependente(BaseModel):
+    fcpf: str
     nome_dependente: str
-    sexo: Optional[str]= None
+    sexo: Optional[str] = None
     datanasc: Optional[date] = None
-    parentesco: Optional[str]= None
+    parentesco: Optional[str] = None
