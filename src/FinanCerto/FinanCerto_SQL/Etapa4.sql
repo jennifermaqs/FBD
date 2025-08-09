@@ -17,7 +17,6 @@ LEFT JOIN CategoriaTransacao c ON t.ID_Categoria = c.ID_Categoria
 GROUP BY u.ID_Usuario, u.Nome_Usuario; 
 
 -- Visão que retorna os produtos mais vendidos dos usuários
--- Where com o id do usuario retorna só os dele
 CREATE OR REPLACE VIEW Produtos_Mais_Vendidos AS
 SELECT
     u.ID_Usuario,
